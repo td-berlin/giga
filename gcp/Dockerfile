@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Use the official Node.js 20 image.
-FROM node:20-slim
+# Use the official Node.js 24 image.
+FROM node:24-slim
 
 # Create and change to the app directory.
 WORKDIR /usr/src/app
@@ -21,7 +21,6 @@ WORKDIR /usr/src/app
 # Copy application dependency manifests to the container image.
 COPY package*.json ./
 
-RUN npm install -g npm@latest
 RUN npm install
 
 # Copy local code to the container image.
